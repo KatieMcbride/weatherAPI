@@ -4,16 +4,122 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
+        <title>Weather Forecast</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+        
     </head>
     <body>
         <!-- header (snazy name)-->
+        <header id="header" class="header">
+            <p>Weather Forecast</p>
+        </header>
         <!-- search input box (event on mag glass) -->
+        <div id= "search"  class= "jumbotron">
+            <input type="text" placeholder="City Search">
+            <input class="btn btn-default" type="button" value="Search">
+        </div>
         <!-- list of previous searches (event on history click) -->
+        <input class="last search" type="button" value="Search">
+        <input class="last search" type="button" value="Search">
+        <input class="last search" type="button" value="Search">
+        <input class="last search" type="button" value="Search">
+        <input class="last search" type="button" value="Search">
         <!-- current dorky weather status on the city -->
+        <div>
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="..." class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title city">City</h5>
+                            <p class="card-text date"> Date</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Temperature</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Humidity</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Wind Speed</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">UV Index</h5>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- 5 day weather outlook -->
+         <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Icon</th>
+                    <th>Temperature</th>
+                    <th>Humidity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="dayOne">
+                    <td>Day 1</td>
+                    <td>Icon</td>
+                    <td>Temp</td>
+                    <td>Humidity</td>
+                </tr>
+                <tr class="dayTwo">
+                    <td>Day 2</td>
+                    <td>Icon</td>
+                    <td>Temp</td>
+                    <td>Humidity</td>
+                </tr>
+                <tr class="dayThree">
+                    <td>Day 3</td>
+                    <td>Icon</td>
+                    <td>Temp</td>
+                    <td>Humidity</td>
+                </tr>
+                <tr class="dayFour">
+                    <td>Day 4</td>
+                    <td>Icon</td>
+                    <td>Temp</td>
+                    <td>Humidity</td>
+                </tr>
+                <tr class="dayFive">
+                    <td>Day 5</td>
+                    <td>Icon</td>
+                    <td>Temp</td>
+                    <td>Humidity</td>
+                </tr>
+            </tbody>
+        </table>
+   
 
     <script src="./script.js"></script>
     </body>
