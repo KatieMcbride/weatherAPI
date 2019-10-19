@@ -1,21 +1,34 @@
-$(document).ready(function(){
+$(document).ready(function(event){
     /* db */
     /* raw weather object from api */
-    var cityWeather = "https://openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22"
-    /* variables */
-    // var queryURL = queryURL = "https://api.openweathermap.org/data/2.5/weather?q=&appid=" + city +"&appid=" + APIKey;
-    var city = '';
+    // /* variables */
+
+    
+    
 
     /* parsed weather object */
 
     /* utility functions */
-    /* get raw data */
     /* parse raw data */
     /* render parsed data */
 
     /* event functions */
     
     /* search button click */
+    $('#citySearchBtn').on('click', function(){
+        var city = $('#citySearch').val();
+        var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=1fbaf845db1ffb968efccccfdbaa9c39";
+        $.ajax({
+            url: queryURL,
+            method: 'GET'
+             /* get raw data */
+        }).then(function(response){
+            console.log(response);
+            /*parse data*/
+
+            $(".city").text("City:" + response.city.name);
+        })
+    })
     /* have city name  */
 
     /* send city name to a openweather api */
@@ -23,12 +36,6 @@ $(document).ready(function(){
 
     /* init */
     /* check local storage for history of cities and render */
-    $.ajax({
-        url: "https://openweathermap.org/data/2.5/weather?q=London,uk&appid=b6907d289e10d714a6e88b30761fae22",
-        method: "GET"
-    }).then(function(response){
-        console.log(response);
-        /*parse data*/
-    })
+    
 
 });
