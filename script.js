@@ -86,6 +86,22 @@ $(document).ready(function(event){
 
         $('.dayThreeHum').text(response.list[2].main.humidity);
 
+        // Temperature and Humidity Day 4
+        var kC = response.list[3].main.temp;
+        var fC = Math.round((kC-273.15)*1.8+32);
+        console.log(fC);
+        $('.dayFourTemp').text(fC);
+
+        $('.dayFourHum').text(response.list[3].main.humidity);
+
+        //Temperature and Humidity Day 5
+        var kD = response.list[4].main.temp;
+        var fD = Math.round((kD-273.15)*1.8+32);
+        console.log(fD);
+        $('.dayFiveTemp').text(fD);
+
+        $('.dayFiveHum').text(response.list[4].main.humidity);
+
         })
 
     };
