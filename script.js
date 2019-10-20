@@ -1,6 +1,12 @@
 $(document).ready(function(event){
     /* db */
     // Get Date
+    checkTime();
+
+    function checkTime() {
+      let currentDate = moment().format('MMM Do YYYY');
+      $('.date').text(`Today is: ${currentDate}`);
+    };
     /* raw weather object from api */
     // /* variables */
 
