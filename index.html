@@ -7,7 +7,9 @@
         <title>Weather Forecast</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
-        
+        <script src="https://kit.fontawesome.com/0270abbd8e.js" crossorigin="anonymous"></script>
+
+
     </head>
     <body>
         <!-- header (snazy name)-->
@@ -30,7 +32,7 @@
             <div class="card mb-3" style="max-width: 540px;">
                 <div class="row no-gutters">
                     <div class="col-md-4">
-                        <!-- <img src="..." class="card-img" alt="..."> -->
+                      
                     </div>
                     <div class="col-md-8">
                     <div class="card-body">
@@ -45,8 +47,8 @@
                 <div class="col-sm-3">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Temperature</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <h5 class="card-title">Temperature (Farenheit)</h5>
+                            <p class="card-text temperature"></p>
                         </div>
                     </div>
                 </div>
@@ -54,7 +56,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Humidity</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text humidity"></p>
                         </div>
                     </div>
                 </div>
@@ -62,7 +64,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Wind Speed</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text windSpeed"></p>
                         </div>
                     </div>
                 </div>
@@ -70,7 +72,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">UV Index</h5>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text uvIndex"></p>
                         </div>
                     </div>
                 </div>
@@ -89,33 +91,33 @@
             <tbody>
                 <tr class="dayOne">
                     <td>Day 1</td>
-                    <td>Icon</td>
-                    <td>Temp</td>
-                    <td>Humidity</td>
+                    <td><i class="fas fa-sun"></i></td>
+                    <td class="dayOneTemp"></td>
+                    <td class="dayOneHum"></td>
                 </tr>
                 <tr class="dayTwo">
                     <td>Day 2</td>
-                    <td>Icon</td>
-                    <td>Temp</td>
-                    <td>Humidity</td>
+                    <td><i class="fas fa-wind"></i></td>
+                    <td class="dayTwoTemp"></td>
+                    <td class="dayTwoHum"></td>
                 </tr>
                 <tr class="dayThree">
                     <td>Day 3</td>
-                    <td>Icon</td>
-                    <td>Temp</td>
-                    <td>Humidity</td>
+                    <td><i class="fas fa-cloud-showers-heavy"></i></td>
+                    <td class="dayThreeTemp">Temp</td>
+                    <td class="dayThreeHum">Humidity</td>
                 </tr>
                 <tr class="dayFour">
                     <td>Day 4</td>
-                    <td>Icon</td>
-                    <td>Temp</td>
-                    <td>Humidity</td>
+                    <td><i class="fas fa-snowflake"></i></td>
+                    <td class="dayFourTemp">Temp</td>
+                    <td class="dayFourHum">Humidity</td>
                 </tr>
                 <tr class="dayFive">
                     <td>Day 5</td>
-                    <td>Icon</td>
-                    <td>Temp</td>
-                    <td>Humidity</td>
+                    <td><i class="fas fa-cloud"></i></td>
+                    <td class="dayFiveTemp">Temp</td>
+                    <td class="dayFiveHum">Humidity</td>
                 </tr>
             </tbody>
         </table>
