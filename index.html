@@ -12,27 +12,29 @@
 
     </head>
     <body>
-        <!-- header (snazy name)-->
-        <header id="header" class="header">
-            <p>Weather Forecast</p>
-        </header>
-        <!-- search input box (event on mag glass) -->
-        <div id= "search"  class= "jumbotron">
-            <input type="text" placeholder="City Search" id="citySearch">
-            <input class="btn btn-default" id="citySearchBtn" type="button" value="Search">
+        <div class="container">
+            <!-- search input box (event on mag glass) -->
+            <div id= "search"  class= "jumbotron">
+                    <h1 class= "text-center">Weather Forecast</h1>
+                <input type="text" placeholder="City Search" id="citySearch">
+                <input class="btn btn-default" id="citySearchBtn" type="button" value="Search">
+            </div>
         </div>
-        <!-- list of previous searches (event on history click) -->
-        <input class="last search" type="button" value="Search">
-        <input class="last search" type="button" value="Search">
-        <input class="last search" type="button" value="Search">
-        <input class="last search" type="button" value="Search">
-        <input class="last search" type="button" value="Search">
+        <div class="container">
+            <!-- list of previous searches (event on history click) -->
+            <input class="last search" type="button" value="Search">
+            <input class="last search" type="button" value="Search">
+            <input class="last search" type="button" value="Search">
+            <input class="last search" type="button" value="Search">
+            <input class="last search" type="button" value="Search">
+        </div>
+
         <!-- current dorky weather status on the city -->
-        <div>
-            <div class="card mb-3" style="max-width: 540px;">
+        <div class="container align-content-center">
+            <div class="card mb-5" style="max-width: 540px;">
                 <div class="row no-gutters">
                     <div class="col-md-4">
-                      
+                      <!-- image or Icon -->
                     </div>
                     <div class="col-md-8">
                     <div class="card-body">
@@ -42,7 +44,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container p-5">
             <div class="row">
                 <div class="col-sm-3">
                     <div class="card">
@@ -55,7 +57,7 @@
                 <div class="col-sm-3">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Humidity</h5>
+                            <h5 class="card-title">Humidity <br> (Percentage)</h5>
                             <p class="card-text humidity"></p>
                         </div>
                     </div>
@@ -63,7 +65,7 @@
                 <div class="col-sm-3">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Wind Speed</h5>
+                            <h5 class="card-title">Wind Speed (Meters/second)</h5>
                             <p class="card-text windSpeed"></p>
                         </div>
                     </div>
@@ -79,6 +81,7 @@
             </div>
         </div>
         <!-- 5 day weather outlook -->
+        <div class="container">
          <table class="table table-hover">
             <thead>
                 <tr>
@@ -121,6 +124,7 @@
                 </tr>
             </tbody>
         </table>
+        </div>
    
 
     <script src="./script.js"></script>
