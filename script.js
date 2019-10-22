@@ -1,4 +1,7 @@
 $(document).ready(function(event){
+    // variables
+    var pastSearches = [];
+    
     /* db */
     // Get Date
     checkTime();
@@ -53,6 +56,7 @@ $(document).ready(function(event){
             // $(".uvIndex").text(response.list[0].wind.speed);
 
             fiveDayForecast()
+            localStore()
         })
     });
 
@@ -117,6 +121,33 @@ $(document).ready(function(event){
 
     /* init */
     /* check local storage for history of cities and render */
+    function localStore() {
+        var cityStorage = $('#citySearch').val();
+        localStorage.setItem("pastSearches",cityStorage);
+        if(pastSearches.indexOf(cityStorage) == -1) {
+            pastSearches.unshift(cityStorage);
+            if(pastSearches.length > 5) { 
+               pastSearches.pop();
+            }
+            localStorage["pastSearches"] = JSON.stringify(pastSearches);
+        };
+        renderLastRegistered();
+    };
+
+    renderLastRegistered();
+
+    function renderLastRegistered() {
+        if(localStorage["pastSearches"]) {
+            pastSearches = JSON.parse(localStorage["pastSearches"]);
+        $("#searchBtnOne").val(pastSearches[0]);
+        $("#searchBtnTwo").val(pastSearches[1]);
+        $("#searchBtnThree").val(pastSearches[2]);
+        $("#searchBtnFour").val(pastSearches[3]);
+        $("#searchBtnFive").val(pastSearches[4]);
     
+        };
+    };
 
 });
+
+
