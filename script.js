@@ -52,8 +52,6 @@ $(document).ready(function(event){
             //Wind Speed
             $(".windSpeed").text(response.list[0].wind.speed);
 
-            // UV Index
-            // $(".uvIndex").text(response.list[0].wind.speed);
 
             var mainWeather = response.list[0].weather[0].main;
             if(mainWeather === "Clear"){
