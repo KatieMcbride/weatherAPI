@@ -39,7 +39,8 @@ $(document).ready(function(event){
 
             // City
             $(".city").text("City:" + response.city.name);
-
+          
+        
             // Temperature
             var k = response.list[0].main.temp;
             var f = Math.round((k-273.15)*1.8+32);
@@ -72,6 +73,8 @@ $(document).ready(function(event){
             localStore()
         })
     });
+
+    
 
     function fiveDayForecast(){
         var city = $('#citySearch').val();
@@ -203,6 +206,7 @@ $(document).ready(function(event){
 
         })
 
+
     };
     
 
@@ -236,6 +240,56 @@ $(document).ready(function(event){
     
         };
     };
+
+      $('#searchBtnOne').on('click', function(){
+        /* get city name  */
+        var city = $('#searchBtnOne').val();
+        var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=1fbaf845db1ffb968efccccfdbaa9c39";
+        $.ajax({
+            url: queryURL,
+            method: 'GET'
+             /* get raw data */
+        }).then(function(response){
+            console.log(response);
+            /*parse data*/
+
+            // City
+            $(".city").text("City:" + response.city.name);
+          
+        
+            // Temperature
+            var k = response.list[0].main.temp;
+            var f = Math.round((k-273.15)*1.8+32);
+            console.log(f);
+            $('.temperature').text(f);
+
+            //Humidity
+            $(".humidity").text(response.list[0].main.humidity);
+
+            //Wind Speed
+            $(".windSpeed").text(response.list[0].wind.speed);
+
+
+            var mainWeather = response.list[0].weather[0].main;
+            if(mainWeather === "Clear"){
+                $("#mainWeatherIcon").addClass("fas fa-sun fa-10x"); 
+            } if(mainWeather === "Clouds") {
+                $("#mainWeatherIcon").addClass("fas fa-cloud fa-10x");
+            } if (mainWeather === "Rain"){
+                $("#mainWeatherIcon").addClass("fas fa-cloud-rain fa-10x");
+            } if (mainWeather === "Snow"){
+                $("#mainWeatherIcon").addClass("fas fa-snowflake fa-10x");
+            } if (mainWeather === "Thunderstorm"){
+                $("#mainWeatherIcon").addClass("fas fa-cloud-showers-heavy fa-10x");
+            } if (mainWeather === "Drizzle"){
+                $("#mainWeatherIcon").addClass("fas fa-cloud-rain fa-10x");
+            } 
+
+            fiveDayForecast()
+            localStore()
+        })
+    });
+
 
 });
 
