@@ -28,7 +28,7 @@ $(document).ready(function(event){
     $('#citySearchBtn').on('click', function forecast(){
         /* get city name  */
         var city = $('#citySearch').val();
-        var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=1fbaf845db1ffb968efccccfdbaa9c39";
+        var queryURL = "//api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=1fbaf845db1ffb968efccccfdbaa9c39";
         $.ajax({
             url: queryURL,
             method: 'GET'
@@ -78,7 +78,7 @@ $(document).ready(function(event){
 
     function fiveDayForecast(){
         var city = $('#citySearch').val();
-        var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=1fbaf845db1ffb968efccccfdbaa9c39";
+        var queryURL = "//api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=1fbaf845db1ffb968efccccfdbaa9c39";
         $.ajax({
             url: queryURL,
             method: 'GET'
@@ -244,7 +244,7 @@ $(document).ready(function(event){
     $('#searchBtnOne').on('click', function(){
         /* get city name  */
         var city = $('#searchBtnOne').val();
-        var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=1fbaf845db1ffb968efccccfdbaa9c39";
+        var queryURL = "//api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=1fbaf845db1ffb968efccccfdbaa9c39";
         $.ajax({
             url: queryURL,
             method: 'GET'
@@ -292,7 +292,7 @@ $(document).ready(function(event){
     $('#searchBtnTwo').on('click', function(){
         /* get city name  */
         var city = $('#searchBtnTwo').val();
-        var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=1fbaf845db1ffb968efccccfdbaa9c39";
+        var queryURL = "//api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=1fbaf845db1ffb968efccccfdbaa9c39";
         $.ajax({
             url: queryURL,
             method: 'GET'
@@ -341,7 +341,7 @@ $(document).ready(function(event){
     $('#searchBtnThree').on('click', function(){
         /* get city name  */
         var city = $('#searchBtnThree').val();
-        var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=1fbaf845db1ffb968efccccfdbaa9c39";
+        var queryURL = "//api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=1fbaf845db1ffb968efccccfdbaa9c39";
         $.ajax({
             url: queryURL,
             method: 'GET'
@@ -390,7 +390,7 @@ $(document).ready(function(event){
     $('#searchBtnFour').on('click', function(){
         /* get city name  */
         var city = $('#searchBtnFour').val();
-        var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=1fbaf845db1ffb968efccccfdbaa9c39";
+        var queryURL = "//api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=1fbaf845db1ffb968efccccfdbaa9c39";
         $.ajax({
             url: queryURL,
             method: 'GET'
