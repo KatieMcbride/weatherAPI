@@ -439,7 +439,7 @@ $(document).ready(function(event){
     $('#searchBtnFive').on('click', function(){
         /* get city name  */
         var city = $('#searchBtnFive').val();
-        var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=1fbaf845db1ffb968efccccfdbaa9c39";
+        var queryURL = "//api.openweathermap.org/data/2.5/forecast?q=" + city + "&APPID=1fbaf845db1ffb968efccccfdbaa9c39";
         $.ajax({
             url: queryURL,
             method: 'GET'
